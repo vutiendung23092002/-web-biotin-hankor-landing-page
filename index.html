@@ -80,6 +80,20 @@
             }
         }
 
+        @keyframes textGlow {
+
+            0%,
+            100% {
+                opacity: 1;
+                filter: drop-shadow(0 0 2px rgba(245, 124, 0, 0.7));
+            }
+
+            50% {
+                opacity: 0.8;
+                filter: drop-shadow(0 0 8px rgba(249, 178, 51, 1));
+            }
+        }
+
         .animate-scalePulse {
             animation: scalePulse 1.5s infinite ease-in-out;
         }
@@ -329,14 +343,14 @@
                 <div>
                     <label class="block font-semibold text-gray-800 mb-2">Số lượng<span
                             class="text-red-700"> *</span></label>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-2">
+                    <div class="grid grid-cols-1 gap-3 mb-2">
                         <label class="flex items-center gap-2 cursor-pointer">
                             <input type="radio" name="combo" value="1" class="accent-[#a0522d]">
-                            <span>1 hộp - 419.000đ</span>
+                            <span>1 hộp (<span class="line-through">499.000đ</span> giảm còn <span class="text-orange-700 animate-[textGlow_2s_ease-in-out_infinite]">419.000đ</span> )</span>
                         </label>
                         <label class="flex items-center gap-2 cursor-pointer">
                             <input type="radio" name="combo" value="2" class="accent-[#a0522d]">
-                            <span>2 hộp - 799.000đ</span>
+                            <span>2 hộp (<span class="line-through">999.000đ</span> giảm còn <span class="text-orange-700 animate-[textGlow_2s_ease-in-out_infinite]">799.000đ</span>)</span>
                         </label>
                     </div>
                     <input id="quantity" type="number" name="entry.960744204" min="1"
